@@ -61,8 +61,6 @@ if [ "$(uname -m)" = "arm64" ]
     echo "Installing Rosetta"
     # Installs Rosetta2
     softwareupdate --install-rosetta --agree-to-license
-  else
-    echo "Rosetta is installed"
   fi
 fi
 
