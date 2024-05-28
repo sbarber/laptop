@@ -21,7 +21,7 @@ cask "gqrx"
 
 # Mas Installs
 brew "mas"
-mas "1Password"
+mas "1Password", id: 443_987_910
 
 # VSCode Extensions
 vscode "GitHub.codespaces"
