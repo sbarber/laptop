@@ -14,7 +14,7 @@ brew "wget"
 brew "zsh"
 
 # Cask Installs
-cask_args appdir: "~/Applications", require_sha: true
+cask_args appdir: "~/Applications"
 cask "google-chrome"
 cask "firefox"
 cask "gqrx"
