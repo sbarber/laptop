@@ -38,6 +38,10 @@ if [ ! -f "$HOME/.zshrc" ]; then
   touch "$HOME/.zshrc"
 fi
 
+if [ ! -d "$HOME/Code/" ]; then
+  mkdir "$HOME/Code"
+fi
+
 append_to_zshrc 'export PATH="$HOME/bin:$PATH"'
 
 # Determine Homebrew prefix
