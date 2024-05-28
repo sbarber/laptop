@@ -71,8 +71,6 @@ case "$SHELL" in
     ;;
 esac
 
-
-
 # checks architecture
 if [ "$(uname -m)" = "arm64" ]
   then
@@ -87,5 +85,12 @@ if [ "$(uname -m)" = "arm64" ]
   fi
 fi
 
-# Install Xcode command line tools
-xcode-select --install
+if ! command -v brew >/dev/null; then
+  fancy_echo "Installing Homebrew ..."
+    /bin/bash -c \
+      "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    append_to_zshrc "eval \"\$($HOMEBREW_PREFIX/bin/brew shellenv)\""
+
+    export PATH="$HOMEBREW_PREFIX/bin:$PATH"
+fi
