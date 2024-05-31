@@ -1,0 +1,8 @@
+---
+- hosts: laptop
+  #become: yes
+  remote_user: scottbarber
+
+  tasks:
+    - ansible.builtin.import_tasks: brew-cask-mas.yml
+    - ansible.builtin.import_tasks: mac-settings.yml
